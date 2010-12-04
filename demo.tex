@@ -1,0 +1,567 @@
+
+\documentclass{article}
+
+\usepackage[procnames]{listings}
+\usepackage{color}
+\usepackage{fullpage}
+\usepackage{upquote}
+
+\lstdefinestyle{common}{
+  aboveskip={1.5\baselineskip},
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  columns=fixed,
+  frame=single,
+  framerule=0pt,
+  upquote
+}
+
+\lstdefinestyle{shjs/acid}{
+  backgroundcolor=\color[RGB]{238,238,238},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{166,133,0},
+  commentstyle=\color[RGB]{255,128,0},
+  stringstyle=\color[RGB]{166,133,0},
+  keywordstyle=\color[RGB]{187,121,119}\bfseries,
+  procnamestyle=\color[RGB]{0,68,102}
+}
+\lstdefinestyle{shjs/berries-dark}{
+  backgroundcolor=\color[RGB]{128,191,255},
+  style=common,
+  basicstyle=\color[RGB]{64,0,128},
+  identifierstyle=\color[RGB]{196,0,0},
+  commentstyle=\color[RGB]{223,9,89}\itshape,
+  stringstyle=\color[RGB]{196,0,0},
+  keywordstyle=\color[RGB]{63,43,240}\bfseries,
+  procnamestyle=\color[RGB]{144,17,100}\bfseries
+}
+\lstdefinestyle{shjs/berries-light}{
+  backgroundcolor=\color[RGB]{215,255,255},
+  style=common,
+  basicstyle=\color[RGB]{71,64,109},
+  identifierstyle=\color[RGB]{95,129,179},
+  commentstyle=\color[RGB]{156,60,175}\itshape,
+  stringstyle=\color[RGB]{95,129,179},
+  keywordstyle=\color[RGB]{44,174,30}\bfseries,
+  procnamestyle=\color[RGB]{144,17,100}\bfseries
+}
+\lstdefinestyle{shjs/bipolar}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{209,73,166},
+  identifierstyle=\color[RGB]{158,244,87},
+  commentstyle=\color[RGB]{53,214,229}\itshape,
+  stringstyle=\color[RGB]{158,244,87},
+  keywordstyle=\color[RGB]{238,133,226}\bfseries,
+  procnamestyle=\color[RGB]{213,25,147}\bfseries
+}
+\lstdefinestyle{shjs/blacknblue}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{35,70,213},
+  identifierstyle=\color[RGB]{207,198,49},
+  commentstyle=\color[RGB]{111,178,196}\itshape,
+  stringstyle=\color[RGB]{207,198,49},
+  keywordstyle=\color[RGB]{30,222,220}\bfseries,
+  procnamestyle=\color[RGB]{28,150,237}
+}
+\lstdefinestyle{shjs/bright}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{64,30,122},
+  identifierstyle=\color[RGB]{24,97,167},
+  commentstyle=\color[RGB]{56,173,36},
+  stringstyle=\color[RGB]{24,97,167},
+  keywordstyle=\color[RGB]{255,48,48}\bfseries,
+  procnamestyle=\color[RGB]{209,28,237}
+}
+\lstdefinestyle{shjs/contrast}{
+  backgroundcolor=\color[RGB]{237,97,4},
+  style=common,
+  basicstyle=\color[RGB]{0,0,255},
+  identifierstyle=\color[RGB]{17,248,12},
+  commentstyle=\color[RGB]{0,0,0},
+  stringstyle=\color[RGB]{17,248,12},
+  keywordstyle=\color[RGB]{255,255,255}\bfseries,
+  procnamestyle=\color[RGB]{255,247,0}\bfseries
+}
+\lstdefinestyle{shjs/darkblue}{
+  backgroundcolor=\color[RGB]{0,0,64},
+  style=common,
+  basicstyle=\color[RGB]{199,199,199},
+  identifierstyle=\color[RGB]{255,160,160},
+  commentstyle=\color[RGB]{128,160,255},
+  stringstyle=\color[RGB]{255,160,160},
+  keywordstyle=\color[RGB]{255,255,96},
+  procnamestyle=\color[RGB]{255,255,255}\bfseries
+}
+\lstdefinestyle{shjs/darkness}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{171,171,0}\bfseries,
+  commentstyle=\color[RGB]{136,136,136}\itshape,
+  stringstyle=\color[RGB]{171,171,0}\bfseries,
+  keywordstyle=\color[RGB]{255,255,0}\bfseries,
+  procnamestyle=\color[RGB]{243,70,39}
+}
+\lstdefinestyle{shjs/desert}{
+  backgroundcolor=\color[RGB]{175,148,126},
+  style=common,
+  basicstyle=\color[RGB]{255,253,236},
+  identifierstyle=\color[RGB]{246,246,71},
+  commentstyle=\color[RGB]{160,0,0}\itshape,
+  stringstyle=\color[RGB]{246,246,71},
+  keywordstyle=\color[RGB]{254,248,188}\bfseries,
+  procnamestyle=\color[RGB]{243,210,102}\bfseries
+}
+\lstdefinestyle{shjs/dull}{
+  backgroundcolor=\color[RGB]{191,191,191},
+  style=common,
+  basicstyle=\color[RGB]{101,101,101},
+  identifierstyle=\color[RGB]{0,85,153},
+  commentstyle=\color[RGB]{209,29,32}\itshape,
+  stringstyle=\color[RGB]{0,85,153},
+  keywordstyle=\color[RGB]{53,53,53}\bfseries,
+  procnamestyle=\color[RGB]{56,37,92}
+}
+\lstdefinestyle{shjs/easter}{
+  backgroundcolor=\color[RGB]{255,255,128},
+  style=common,
+  basicstyle=\color[RGB]{44,123,52},
+  identifierstyle=\color[RGB]{202,75,227},
+  commentstyle=\color[RGB]{36,200,21}\itshape,
+  stringstyle=\color[RGB]{202,75,227},
+  keywordstyle=\color[RGB]{29,69,214}\bfseries,
+  procnamestyle=\color[RGB]{29,69,214}
+}
+\lstdefinestyle{shjs/emacs}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{189,141,139},
+  commentstyle=\color[RGB]{172,32,32}\itshape,
+  stringstyle=\color[RGB]{189,141,139},
+  keywordstyle=\color[RGB]{156,32,238}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/golden}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{221,187,0},
+  identifierstyle=\color[RGB]{255,0,0},
+  commentstyle=\color[RGB]{151,131,69}\itshape,
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{255,237,138}\bfseries,
+  procnamestyle=\color[RGB]{221,187,0}\bfseries
+}
+\lstdefinestyle{shjs/greenlcd}{
+  backgroundcolor=\color[RGB]{0,52,0},
+  style=common,
+  basicstyle=\color[RGB]{0,187,0},
+  identifierstyle=\color[RGB]{223,223,223},
+  commentstyle=\color[RGB]{136,136,136}\itshape,
+  stringstyle=\color[RGB]{223,223,223},
+  keywordstyle=\color[RGB]{0,237,0}\bfseries,
+  procnamestyle=\color[RGB]{192,255,115}
+}
+\lstdefinestyle{shjs/ide-anjuta}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{221,187,0},
+  commentstyle=\color[RGB]{255,0,0}\itshape,
+  stringstyle=\color[RGB]{221,187,0},
+  keywordstyle=\color[RGB]{0,0,128}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/ide-codewarrior}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{102,102,102},
+  commentstyle=\color[RGB]{179,0,0},
+  stringstyle=\color[RGB]{102,102,102},
+  keywordstyle=\color[RGB]{0,0,179},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/ide-devcpp}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{255,0,0},
+  commentstyle=\color[RGB]{0,0,128}\itshape,
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{0,0,0}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/ide-eclipse}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,255},
+  commentstyle=\color[RGB]{113,122,179},
+  stringstyle=\color[RGB]{0,0,255},
+  keywordstyle=\color[RGB]{127,0,85}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/ide-kdev}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{255,0,0},
+  commentstyle=\color[RGB]{191,191,191}\itshape,
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{96,0,0}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/ide-msvcpp}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,0},
+  commentstyle=\color[RGB]{0,128,0}\itshape,
+  stringstyle=\color[RGB]{0,0,0},
+  keywordstyle=\color[RGB]{0,0,255}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/kwrite}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{255,0,0},
+  commentstyle=\color[RGB]{131,129,131}\itshape,
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{0,0,0}\bfseries,
+  procnamestyle=\color[RGB]{1,1,129}
+}
+\lstdefinestyle{shjs/matlab}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{128,0,0},
+  commentstyle=\color[RGB]{131,129,131}\itshape,
+  stringstyle=\color[RGB]{128,0,0},
+  keywordstyle=\color[RGB]{0,0,255},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/navy}{
+  backgroundcolor=\color[RGB]{0,0,53},
+  style=common,
+  basicstyle=\color[RGB]{0,139,255},
+  identifierstyle=\color[RGB]{255,255,255},
+  commentstyle=\color[RGB]{255,187,0}\itshape,
+  stringstyle=\color[RGB]{255,255,255},
+  keywordstyle=\color[RGB]{248,197,11}\bfseries,
+  procnamestyle=\color[RGB]{255,255,255}
+}
+\lstdefinestyle{shjs/nedit}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,100,0},
+  commentstyle=\color[RGB]{0,0,0}\itshape,
+  stringstyle=\color[RGB]{0,100,0},
+  keywordstyle=\color[RGB]{0,0,0}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/neon}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{205,0,255},
+  commentstyle=\color[RGB]{0,255,0}\itshape,
+  stringstyle=\color[RGB]{205,0,255},
+  keywordstyle=\color[RGB]{0,255,255}\bfseries,
+  procnamestyle=\color[RGB]{255,255,255}\bfseries
+}
+\lstdefinestyle{shjs/night}{
+  backgroundcolor=\color[RGB]{0,0,68},
+  style=common,
+  basicstyle=\color[RGB]{221,0,255},
+  identifierstyle=\color[RGB]{255,255,255},
+  commentstyle=\color[RGB]{191,191,191},
+  stringstyle=\color[RGB]{255,255,255},
+  keywordstyle=\color[RGB]{255,255,255}\bfseries,
+  procnamestyle=\color[RGB]{255,6,205}\bfseries
+}
+\lstdefinestyle{shjs/pablo}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{0,255,255},
+  commentstyle=\color[RGB]{128,128,128},
+  stringstyle=\color[RGB]{0,255,255},
+  keywordstyle=\color[RGB]{192,192,0}\bfseries,
+  procnamestyle=\color[RGB]{255,34,185}
+}
+\lstdefinestyle{shjs/peachpuff}{
+  backgroundcolor=\color[RGB]{255,218,185},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{192,0,88},
+  commentstyle=\color[RGB]{64,96,144},
+  stringstyle=\color[RGB]{192,0,88},
+  keywordstyle=\color[RGB]{165,42,42}\bfseries,
+  procnamestyle=\color[RGB]{82,28,199}
+}
+\lstdefinestyle{shjs/print}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,0},
+  commentstyle=\color[RGB]{102,102,102}\itshape,
+  stringstyle=\color[RGB]{0,0,0},
+  keywordstyle=\color[RGB]{0,0,0}\bfseries,
+  procnamestyle=\color[RGB]{82,28,199}
+}
+\lstdefinestyle{shjs/rand01}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{18,27,40},
+  identifierstyle=\color[RGB]{43,131,186},
+  commentstyle=\color[RGB]{171,171,171}\itshape,
+  stringstyle=\color[RGB]{43,131,186},
+  keywordstyle=\color[RGB]{10,127,109}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}\bfseries
+}
+\lstdefinestyle{shjs/the}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,136},
+  commentstyle=\color[RGB]{0,255,0}\itshape,
+  stringstyle=\color[RGB]{0,0,136},
+  keywordstyle=\color[RGB]{0,0,255},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/typical}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{255,0,0},
+  commentstyle=\color[RGB]{102,102,102}\itshape,
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{0,0,255}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}\bfseries
+}
+\lstdefinestyle{shjs/vampire}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,0,0},
+  identifierstyle=\color[RGB]{187,0,255},
+  commentstyle=\color[RGB]{171,171,171}\itshape,
+  stringstyle=\color[RGB]{187,0,255},
+  keywordstyle=\color[RGB]{255,255,255}\bfseries,
+  procnamestyle=\color[RGB]{123,199,16}
+}
+\lstdefinestyle{shjs/vim}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{255,0,0},
+  commentstyle=\color[RGB]{0,0,255},
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{178,104,24},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/vim-dark}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{255,0,0},
+  commentstyle=\color[RGB]{0,0,255},
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{178,104,24},
+  procnamestyle=\color[RGB]{255,255,255}
+}
+\lstdefinestyle{shjs/whatis}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{0,255,0},
+  identifierstyle=\color[RGB]{255,187,0},
+  commentstyle=\color[RGB]{255,0,0},
+  stringstyle=\color[RGB]{255,187,0},
+  keywordstyle=\color[RGB]{250,90,3}\bfseries,
+  procnamestyle=\color[RGB]{231,33,211}
+}
+\lstdefinestyle{shjs/whitengrey}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{105,105,105},
+  identifierstyle=\color[RGB]{0,136,0},
+  commentstyle=\color[RGB]{19,38,162}\itshape,
+  stringstyle=\color[RGB]{0,136,0},
+  keywordstyle=\color[RGB]{105,105,105}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+\lstdefinestyle{shjs/zellner}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{255,0,255},
+  commentstyle=\color[RGB]{255,0,0},
+  stringstyle=\color[RGB]{255,0,255},
+  keywordstyle=\color[RGB]{165,42,42},
+  procnamestyle=\color[RGB]{0,0,0}\bfseries
+}
+\begin{document}
+
+\lstinputlisting[language=python,title=shjs/acid,procnamekeys={def},style=shjs/acid]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/berries-dark,procnamekeys={def},style=shjs/berries-dark]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/berries-light,procnamekeys={def},style=shjs/berries-light]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/bipolar,procnamekeys={def},style=shjs/bipolar]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/blacknblue,procnamekeys={def},style=shjs/blacknblue]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/bright,procnamekeys={def},style=shjs/bright]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/contrast,procnamekeys={def},style=shjs/contrast]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/darkblue,procnamekeys={def},style=shjs/darkblue]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/darkness,procnamekeys={def},style=shjs/darkness]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/desert,procnamekeys={def},style=shjs/desert]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/dull,procnamekeys={def},style=shjs/dull]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/easter,procnamekeys={def},style=shjs/easter]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/emacs,procnamekeys={def},style=shjs/emacs]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/golden,procnamekeys={def},style=shjs/golden]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/greenlcd,procnamekeys={def},style=shjs/greenlcd]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/ide-anjuta,procnamekeys={def},style=shjs/ide-anjuta]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/ide-codewarrior,procnamekeys={def},style=shjs/ide-codewarrior]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/ide-devcpp,procnamekeys={def},style=shjs/ide-devcpp]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/ide-eclipse,procnamekeys={def},style=shjs/ide-eclipse]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/ide-kdev,procnamekeys={def},style=shjs/ide-kdev]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/ide-msvcpp,procnamekeys={def},style=shjs/ide-msvcpp]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/kwrite,procnamekeys={def},style=shjs/kwrite]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/matlab,procnamekeys={def},style=shjs/matlab]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/navy,procnamekeys={def},style=shjs/navy]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/nedit,procnamekeys={def},style=shjs/nedit]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/neon,procnamekeys={def},style=shjs/neon]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/night,procnamekeys={def},style=shjs/night]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/pablo,procnamekeys={def},style=shjs/pablo]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/peachpuff,procnamekeys={def},style=shjs/peachpuff]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/print,procnamekeys={def},style=shjs/print]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/rand01,procnamekeys={def},style=shjs/rand01]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/the,procnamekeys={def},style=shjs/the]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/typical,procnamekeys={def},style=shjs/typical]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/vampire,procnamekeys={def},style=shjs/vampire]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/vim,procnamekeys={def},style=shjs/vim]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/vim-dark,procnamekeys={def},style=shjs/vim-dark]{sample.py}
+
+\newpage
+
+\lstinputlisting[language=python,title=shjs/whatis,procnamekeys={def},style=shjs/whatis]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/whitengrey,procnamekeys={def},style=shjs/whitengrey]{sample.py}
+
+\hrulefill
+
+\lstinputlisting[language=python,title=shjs/zellner,procnamekeys={def},style=shjs/zellner]{sample.py}
+
+\end{document}

@@ -164,8 +164,8 @@ def main(argc, argv):
     # you  should  be  calling  this  with at  least  three  styles  -
     # otherwise things fall apart.
     ll = len(l)
-    print '\n\\newpage\n'.join(['\n\\hrulefill\n'.join(l[i:i + ll/3])
-                                for i in range(0, ll, ll/3)])
+    print '\n\\newpage\n'.join(['\n\\hrulefill\n'.join(l[i:i + 3])
+                                for i in range(0, ll, 3)])
 
     # ...end the document
     print r'\end{document}'
