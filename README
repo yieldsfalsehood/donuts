@@ -1,0 +1,28 @@
+
+There are a few things to do to make this work.
+  1) Install Lunatic [http://niemeyer.net/lunatic-python]
+  2) Download Highlight [http://www.andre-simon.de/index.html]
+  3) Update consts.py to point THEMES_DIR at the themes directory from
+     the highlight package
+  4) Update the theme definitions in consts.py (more on this in a bit)
+  5) Install Latex dependencies:
+     - listings
+     - color
+     - upquote (can safely be edited out)
+     - fullpage (only used for the demo)
+
+Once that's in place, generate a Latex .sty file with:
+  $ ./highlight2tex.py > highlights.sty
+
+If you're not interested in going through the hassle of installing all
+the dependencies, the only file of interest is highlights.sty - enjoy.
+
+I  use a  common style  definition  for all  my listings  style, so  I
+wrapped those  definitions up  in their own  style and  reference them
+from all the  other styles. They can be  modified in consts.py through
+common_style or listings_style (which references the common style).
+
+There's  also  a  demo-generating  script  for  the  sake  of  showing
+off. This will  give a small listing of Python  code repeated once for
+each of the 80 themes.
+  $ ./texdemo.py > demo.tex
