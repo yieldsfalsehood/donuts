@@ -1,0 +1,892 @@
+\lstdefinestyle{common}{
+  aboveskip={1.5\baselineskip},
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  columns=fixed,
+  frame=single,
+  framerule=0pt,
+  upquote
+}
+
+\lstdefinestyle{highlight/edit-gedit}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{58,57,53},
+  identifierstyle=\color[RGB]{46,139,87},
+  commentstyle=\color[RGB]{0,60,255},
+  stringstyle=\color[RGB]{255,0,255},
+  keywordstyle=\color[RGB]{165,42,53},
+  procnamestyle=\color[RGB]{58,57,53}\bfseries
+}
+
+\lstdefinestyle{highlight/edit-eclipse}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{127,0,85}\bfseries,
+  commentstyle=\color[RGB]{113,122,179},
+  stringstyle=\color[RGB]{0,0,255},
+  keywordstyle=\color[RGB]{127,0,85}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/bipolar}{
+  backgroundcolor=\color[RGB]{15,2,10},
+  style=common,
+  basicstyle=\color[RGB]{214,43,154},
+  identifierstyle=\color[RGB]{29,150,23}\bfseries,
+  commentstyle=\color[RGB]{53,214,229},
+  stringstyle=\color[RGB]{235,162,54},
+  keywordstyle=\color[RGB]{32,199,157}\bfseries,
+  procnamestyle=\color[RGB]{129,229,53}\bfseries
+}
+
+\lstdefinestyle{highlight/edit-xcode}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{143,0,85},
+  commentstyle=\color[RGB]{0,127,28},
+  stringstyle=\color[RGB]{192,0,0},
+  keywordstyle=\color[RGB]{143,0,85},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/freya}{
+  backgroundcolor=\color[RGB]{42,42,42},
+  style=common,
+  basicstyle=\color[RGB]{220,220,204},
+  identifierstyle=\color[RGB]{218,191,165}\bfseries,
+  commentstyle=\color[RGB]{194,182,128},
+  stringstyle=\color[RGB]{175,224,145},
+  keywordstyle=\color[RGB]{224,175,145}\bfseries,
+  procnamestyle=\color[RGB]{166,225,255}
+}
+
+\lstdefinestyle{highlight/night}{
+  backgroundcolor=\color[RGB]{48,48,64},
+  style=common,
+  basicstyle=\color[RGB]{240,240,248},
+  identifierstyle=\color[RGB]{187,170,255},
+  commentstyle=\color[RGB]{224,224,112},
+  stringstyle=\color[RGB]{240,240,248},
+  keywordstyle=\color[RGB]{0,216,248},
+  procnamestyle=\color[RGB]{204,102,204}
+}
+
+\lstdefinestyle{highlight/olive}{
+  backgroundcolor=\color[RGB]{51,51,0},
+  style=common,
+  basicstyle=\color[RGB]{217,217,195},
+  identifierstyle=\color[RGB]{218,165,32},
+  commentstyle=\color[RGB]{189,182,107},
+  stringstyle=\color[RGB]{175,255,47},
+  keywordstyle=\color[RGB]{143,188,143}\bfseries,
+  procnamestyle=\color[RGB]{217,217,195}
+}
+
+\lstdefinestyle{highlight/edit-vim}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,255,0},
+  commentstyle=\color[RGB]{0,0,255},
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{178,104,24},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/bclear}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{50,50,50},
+  identifierstyle=\color[RGB]{160,0,80},
+  commentstyle=\color[RGB]{150,150,150},
+  stringstyle=\color[RGB]{16,148,160},
+  keywordstyle=\color[RGB]{59,106,200},
+  procnamestyle=\color[RGB]{199,58,105}
+}
+
+\lstdefinestyle{highlight/edit-msvs2008}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,255},
+  commentstyle=\color[RGB]{0,128,0},
+  stringstyle=\color[RGB]{163,21,21},
+  keywordstyle=\color[RGB]{0,0,255},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/kellys}{
+  backgroundcolor=\color[RGB]{42,43,47},
+  style=common,
+  basicstyle=\color[RGB]{225,224,229},
+  identifierstyle=\color[RGB]{230,172,50},
+  commentstyle=\color[RGB]{103,104,107},
+  stringstyle=\color[RGB]{209,199,158},
+  keywordstyle=\color[RGB]{98,172,206}\bfseries,
+  procnamestyle=\color[RGB]{187,99,207}
+}
+
+\lstdefinestyle{highlight/darkblue}{
+  backgroundcolor=\color[RGB]{0,0,64},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{96,255,96},
+  commentstyle=\color[RGB]{128,160,255},
+  stringstyle=\color[RGB]{255,160,160},
+  keywordstyle=\color[RGB]{226,232,37},
+  procnamestyle=\color[RGB]{232,37,226}\bfseries
+}
+
+\lstdefinestyle{highlight/edit-jedit}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,153,102}\bfseries,
+  commentstyle=\color[RGB]{204,0,0},
+  stringstyle=\color[RGB]{255,0,204},
+  keywordstyle=\color[RGB]{0,153,102}\bfseries,
+  procnamestyle=\color[RGB]{153,102,255}
+}
+
+\lstdefinestyle{highlight/zmrok}{
+  backgroundcolor=\color[RGB]{20,20,20},
+  style=common,
+  basicstyle=\color[RGB]{248,248,248},
+  identifierstyle=\color[RGB]{199,202,135},
+  commentstyle=\color[RGB]{136,136,136},
+  stringstyle=\color[RGB]{217,255,119},
+  keywordstyle=\color[RGB]{165,106,48}\bfseries,
+  procnamestyle=\color[RGB]{59,132,204}
+}
+
+\lstdefinestyle{highlight/ekvoli}{
+  backgroundcolor=\color[RGB]{0,21,53},
+  style=common,
+  basicstyle=\color[RGB]{222,222,222},
+  identifierstyle=\color[RGB]{144,191,208},
+  commentstyle=\color[RGB]{149,144,213},
+  stringstyle=\color[RGB]{135,198,240},
+  keywordstyle=\color[RGB]{255,255,255}\bfseries,
+  procnamestyle=\color[RGB]{209,144,158}
+}
+
+\lstdefinestyle{highlight/blacknblue}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{34,160,214},
+  identifierstyle=\color[RGB]{192,108,248}\bfseries,
+  commentstyle=\color[RGB]{196,123,106},
+  stringstyle=\color[RGB]{207,198,49},
+  keywordstyle=\color[RGB]{30,222,220}\bfseries,
+  procnamestyle=\color[RGB]{28,237,220}
+}
+
+\lstdefinestyle{highlight/earendel}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{140,29,105}\bfseries,
+  commentstyle=\color[RGB]{85,136,23},
+  stringstyle=\color[RGB]{168,102,13},
+  keywordstyle=\color[RGB]{34,57,168}\bfseries,
+  procnamestyle=\color[RGB]{168,34,123}
+}
+
+\lstdefinestyle{highlight/xoria256}{
+  backgroundcolor=\color[RGB]{28,28,28},
+  style=common,
+  basicstyle=\color[RGB]{208,208,208},
+  identifierstyle=\color[RGB]{135,222,140},
+  commentstyle=\color[RGB]{128,128,128},
+  stringstyle=\color[RGB]{255,255,175},
+  keywordstyle=\color[RGB]{135,175,223},
+  procnamestyle=\color[RGB]{222,135,218}
+}
+
+\lstdefinestyle{highlight/aiseered}{
+  backgroundcolor=\color[RGB]{96,0,0},
+  style=common,
+  basicstyle=\color[RGB]{240,128,128},
+  identifierstyle=\color[RGB]{136,255,170},
+  commentstyle=\color[RGB]{255,255,255},
+  stringstyle=\color[RGB]{255,204,136},
+  keywordstyle=\color[RGB]{238,255,153}\bfseries,
+  procnamestyle=\color[RGB]{240,183,127}
+}
+
+\lstdefinestyle{highlight/darkslategray}{
+  backgroundcolor=\color[RGB]{47,79,79},
+  style=common,
+  basicstyle=\color[RGB]{245,222,179},
+  identifierstyle=\color[RGB]{152,251,152}\bfseries,
+  commentstyle=\color[RGB]{218,112,214},
+  stringstyle=\color[RGB]{127,255,212},
+  keywordstyle=\color[RGB]{70,130,180}\bfseries,
+  procnamestyle=\color[RGB]{179,202,245}
+}
+
+\lstdefinestyle{highlight/lucretia}{
+  backgroundcolor=\color[RGB]{0,28,66},
+  style=common,
+  basicstyle=\color[RGB]{222,157,124},
+  identifierstyle=\color[RGB]{41,166,85},
+  commentstyle=\color[RGB]{148,77,57},
+  stringstyle=\color[RGB]{231,243,181},
+  keywordstyle=\color[RGB]{144,127,212},
+  procnamestyle=\color[RGB]{165,154,57}
+}
+
+\lstdefinestyle{highlight/denim}{
+  backgroundcolor=\color[RGB]{0,0,56},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{51,255,153},
+  commentstyle=\color[RGB]{153,153,153},
+  stringstyle=\color[RGB]{204,204,153},
+  keywordstyle=\color[RGB]{255,255,204},
+  procnamestyle=\color[RGB]{153,102,204}
+}
+
+\lstdefinestyle{highlight/navy}{
+  backgroundcolor=\color[RGB]{0,0,53},
+  style=common,
+  basicstyle=\color[RGB]{0,139,255},
+  identifierstyle=\color[RGB]{225,231,47},
+  commentstyle=\color[RGB]{255,187,0},
+  stringstyle=\color[RGB]{255,127,102},
+  keywordstyle=\color[RGB]{248,197,11}\bfseries,
+  procnamestyle=\color[RGB]{255,255,255}
+}
+
+\lstdefinestyle{highlight/edit-kwrite}{
+  backgroundcolor=\color[RGB]{224,234,238},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,87,174},
+  commentstyle=\color[RGB]{131,129,131},
+  stringstyle=\color[RGB]{191,3,3},
+  keywordstyle=\color[RGB]{0,0,0}\bfseries,
+  procnamestyle=\color[RGB]{1,1,129}
+}
+
+\lstdefinestyle{highlight/andes}{
+  backgroundcolor=\color[RGB]{15,15,15},
+  style=common,
+  basicstyle=\color[RGB]{240,240,240},
+  identifierstyle=\color[RGB]{102,255,153},
+  commentstyle=\color[RGB]{51,255,0},
+  stringstyle=\color[RGB]{255,255,119},
+  keywordstyle=\color[RGB]{102,170,255},
+  procnamestyle=\color[RGB]{255,153,170}
+}
+
+\lstdefinestyle{highlight/edit-matlab}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,0},
+  commentstyle=\color[RGB]{0,0,0},
+  stringstyle=\color[RGB]{128,0,0},
+  keywordstyle=\color[RGB]{0,0,255},
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/fine-blue}{
+  backgroundcolor=\color[RGB]{248,248,248},
+  style=common,
+  basicstyle=\color[RGB]{64,64,72},
+  identifierstyle=\color[RGB]{112,64,255}\bfseries,
+  commentstyle=\color[RGB]{255,0,192},
+  stringstyle=\color[RGB]{32,32,255},
+  keywordstyle=\color[RGB]{0,136,88}\bfseries,
+  procnamestyle=\color[RGB]{64,64,72}\bfseries
+}
+
+\lstdefinestyle{highlight/candy}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{240,240,248},
+  identifierstyle=\color[RGB]{255,200,100},
+  commentstyle=\color[RGB]{192,192,208},
+  stringstyle=\color[RGB]{144,208,255},
+  keywordstyle=\color[RGB]{255,160,255},
+  procnamestyle=\color[RGB]{255,92,51}
+}
+
+\lstdefinestyle{highlight/zellner}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,255},
+  commentstyle=\color[RGB]{255,0,0},
+  stringstyle=\color[RGB]{255,0,255},
+  keywordstyle=\color[RGB]{165,42,42},
+  procnamestyle=\color[RGB]{0,0,0}\bfseries
+}
+
+\lstdefinestyle{highlight/darkness}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{0,255,0},
+  commentstyle=\color[RGB]{0,136,136},
+  stringstyle=\color[RGB]{171,171,0}\bfseries,
+  keywordstyle=\color[RGB]{255,255,0}\bfseries,
+  procnamestyle=\color[RGB]{243,70,39}
+}
+
+\lstdefinestyle{highlight/matrix}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{68,204,68},
+  identifierstyle=\color[RGB]{170,255,84}\bfseries,
+  commentstyle=\color[RGB]{34,102,34},
+  stringstyle=\color[RGB]{204,255,51},
+  keywordstyle=\color[RGB]{85,255,85}\bfseries,
+  procnamestyle=\color[RGB]{84,255,170}
+}
+
+\lstdefinestyle{highlight/bluegreen}{
+  backgroundcolor=\color[RGB]{6,26,62},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{169,238,138},
+  commentstyle=\color[RGB]{218,190,162},
+  stringstyle=\color[RGB]{114,165,228}\bfseries,
+  keywordstyle=\color[RGB]{126,117,181},
+  procnamestyle=\color[RGB]{118,181,126}
+}
+
+\lstdefinestyle{highlight/edit-anjuta}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,128},
+  commentstyle=\color[RGB]{255,0,0},
+  stringstyle=\color[RGB]{221,187,0},
+  keywordstyle=\color[RGB]{0,0,128}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/vampire}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,0,0},
+  identifierstyle=\color[RGB]{243,94,30}\bfseries,
+  commentstyle=\color[RGB]{171,171,171},
+  stringstyle=\color[RGB]{187,0,255},
+  keywordstyle=\color[RGB]{255,255,255}\bfseries,
+  procnamestyle=\color[RGB]{255,204,51}
+}
+
+\lstdefinestyle{highlight/print}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,0}\bfseries,
+  commentstyle=\color[RGB]{102,102,102},
+  stringstyle=\color[RGB]{0,0,0},
+  keywordstyle=\color[RGB]{0,0,0}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}\bfseries
+}
+
+\lstdefinestyle{highlight/acid}{
+  backgroundcolor=\color[RGB]{238,238,238},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{128,128,192}\bfseries,
+  commentstyle=\color[RGB]{255,128,0},
+  stringstyle=\color[RGB]{166,133,0},
+  keywordstyle=\color[RGB]{187,121,119}\bfseries,
+  procnamestyle=\color[RGB]{0,68,102}
+}
+
+\lstdefinestyle{highlight/darkspectrum}{
+  backgroundcolor=\color[RGB]{42,42,42},
+  style=common,
+  basicstyle=\color[RGB]{239,239,239},
+  identifierstyle=\color[RGB]{138,226,52}\bfseries,
+  commentstyle=\color[RGB]{138,138,138},
+  stringstyle=\color[RGB]{252,233,79},
+  keywordstyle=\color[RGB]{255,255,255}\bfseries,
+  procnamestyle=\color[RGB]{239,239,239}
+}
+
+\lstdefinestyle{highlight/zenburn}{
+  backgroundcolor=\color[RGB]{31,31,31},
+  style=common,
+  basicstyle=\color[RGB]{220,220,204},
+  identifierstyle=\color[RGB]{223,223,191}\bfseries,
+  commentstyle=\color[RGB]{127,159,127},
+  stringstyle=\color[RGB]{204,147,147},
+  keywordstyle=\color[RGB]{227,206,171},
+  procnamestyle=\color[RGB]{170,191,227}
+}
+
+\lstdefinestyle{highlight/anotherdark}{
+  backgroundcolor=\color[RGB]{51,51,51},
+  style=common,
+  basicstyle=\color[RGB]{222,222,222},
+  identifierstyle=\color[RGB]{189,182,107},
+  commentstyle=\color[RGB]{255,165,0},
+  stringstyle=\color[RGB]{255,160,160},
+  keywordstyle=\color[RGB]{240,230,140},
+  procnamestyle=\color[RGB]{242,82,82}
+}
+
+\lstdefinestyle{highlight/relaxedgreen}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{170,170,170},
+  identifierstyle=\color[RGB]{85,153,85},
+  commentstyle=\color[RGB]{0,165,148},
+  stringstyle=\color[RGB]{0,153,221},
+  keywordstyle=\color[RGB]{172,0,0},
+  procnamestyle=\color[RGB]{237,237,237}
+}
+
+\lstdefinestyle{highlight/seashell}{
+  backgroundcolor=\color[RGB]{255,245,238},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{46,139,87}\bfseries,
+  commentstyle=\color[RGB]{41,41,204},
+  stringstyle=\color[RGB]{255,20,147},
+  keywordstyle=\color[RGB]{46,139,87}\bfseries,
+  procnamestyle=\color[RGB]{0,0,143}
+}
+
+\lstdefinestyle{highlight/golden}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{221,187,0},
+  identifierstyle=\color[RGB]{255,237,138},
+  commentstyle=\color[RGB]{151,131,69},
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{255,237,138}\bfseries,
+  procnamestyle=\color[RGB]{221,187,0}\bfseries
+}
+
+\lstdefinestyle{highlight/navajo-night}{
+  backgroundcolor=\color[RGB]{53,83,111},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{209,116,168}\bfseries,
+  commentstyle=\color[RGB]{231,231,127},
+  stringstyle=\color[RGB]{63,255,167},
+  keywordstyle=\color[RGB]{90,213,213}\bfseries,
+  procnamestyle=\color[RGB]{255,255,255}\bfseries
+}
+
+\lstdefinestyle{highlight/edit-vim-dark}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{0,255,0},
+  commentstyle=\color[RGB]{0,0,255},
+  stringstyle=\color[RGB]{255,0,0},
+  keywordstyle=\color[RGB]{178,104,24},
+  procnamestyle=\color[RGB]{255,255,255}
+}
+
+\lstdefinestyle{highlight/bright}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{51,0,102},
+  identifierstyle=\color[RGB]{244,140,35},
+  commentstyle=\color[RGB]{0,102,51},
+  stringstyle=\color[RGB]{24,97,167},
+  keywordstyle=\color[RGB]{255,48,48},
+  procnamestyle=\color[RGB]{209,28,237}
+}
+
+\lstdefinestyle{highlight/pablo}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{0,192,0}\bfseries,
+  commentstyle=\color[RGB]{128,128,128},
+  stringstyle=\color[RGB]{0,255,255},
+  keywordstyle=\color[RGB]{192,192,0}\bfseries,
+  procnamestyle=\color[RGB]{33,255,192}
+}
+
+\lstdefinestyle{highlight/dante}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{205,175,150},
+  identifierstyle=\color[RGB]{102,205,0},
+  commentstyle=\color[RGB]{0,139,139},
+  stringstyle=\color[RGB]{205,38,38},
+  keywordstyle=\color[RGB]{205,173,0},
+  procnamestyle=\color[RGB]{204,204,204}
+}
+
+\lstdefinestyle{highlight/biogoo}{
+  backgroundcolor=\color[RGB]{214,214,214},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{84,0,84}\bfseries,
+  commentstyle=\color[RGB]{0,0,195},
+  stringstyle=\color[RGB]{209,0,0},
+  keywordstyle=\color[RGB]{0,0,127},
+  procnamestyle=\color[RGB]{0,42,84}
+}
+
+\lstdefinestyle{highlight/manxome}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{204,204,204},
+  identifierstyle=\color[RGB]{247,0,0},
+  commentstyle=\color[RGB]{0,255,0},
+  stringstyle=\color[RGB]{0,255,255},
+  keywordstyle=\color[RGB]{0,170,170},
+  procnamestyle=\color[RGB]{0,170,170}
+}
+
+\lstdefinestyle{highlight/edit-nedit}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{165,42,42}\bfseries,
+  commentstyle=\color[RGB]{0,0,0},
+  stringstyle=\color[RGB]{0,100,0},
+  keywordstyle=\color[RGB]{0,0,0}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/rand01}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{18,27,40},
+  identifierstyle=\color[RGB]{196,38,56}\bfseries,
+  commentstyle=\color[RGB]{171,171,171},
+  stringstyle=\color[RGB]{43,131,186},
+  keywordstyle=\color[RGB]{10,127,109}\bfseries,
+  procnamestyle=\color[RGB]{42,199,73}
+}
+
+\lstdefinestyle{highlight/moe}{
+  backgroundcolor=\color[RGB]{246,246,246},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,102}\bfseries,
+  commentstyle=\color[RGB]{255,136,0},
+  stringstyle=\color[RGB]{170,68,0},
+  keywordstyle=\color[RGB]{102,17,17}\bfseries,
+  procnamestyle=\color[RGB]{0,68,102}
+}
+
+\lstdefinestyle{highlight/rdark}{
+  backgroundcolor=\color[RGB]{30,36,38},
+  style=common,
+  basicstyle=\color[RGB]{186,189,182},
+  identifierstyle=\color[RGB]{227,231,223},
+  commentstyle=\color[RGB]{101,103,99},
+  stringstyle=\color[RGB]{138,226,52},
+  keywordstyle=\color[RGB]{114,159,207},
+  procnamestyle=\color[RGB]{158,189,119}
+}
+
+\lstdefinestyle{highlight/rootwater}{
+  backgroundcolor=\color[RGB]{21,27,29},
+  style=common,
+  basicstyle=\color[RGB]{186,189,182},
+  identifierstyle=\color[RGB]{255,255,255},
+  commentstyle=\color[RGB]{101,101,101},
+  stringstyle=\color[RGB]{119,221,136},
+  keywordstyle=\color[RGB]{143,255,255},
+  procnamestyle=\color[RGB]{237,237,237}
+}
+
+\lstdefinestyle{highlight/desertEx}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{190,190,190},
+  identifierstyle=\color[RGB]{255,165,79},
+  commentstyle=\color[RGB]{124,205,124},
+  stringstyle=\color[RGB]{250,128,114},
+  keywordstyle=\color[RGB]{238,220,130},
+  procnamestyle=\color[RGB]{255,204,204}
+}
+
+\lstdefinestyle{highlight/breeze}{
+  backgroundcolor=\color[RGB]{0,92,112},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{128,255,160},
+  commentstyle=\color[RGB]{200,208,208},
+  stringstyle=\color[RGB]{96,255,255},
+  keywordstyle=\color[RGB]{255,255,128},
+  procnamestyle=\color[RGB]{255,127,255}
+}
+
+\lstdefinestyle{highlight/greenlcd}{
+  backgroundcolor=\color[RGB]{0,48,0},
+  style=common,
+  basicstyle=\color[RGB]{0,187,0},
+  identifierstyle=\color[RGB]{0,237,0},
+  commentstyle=\color[RGB]{136,136,136},
+  stringstyle=\color[RGB]{223,223,223},
+  keywordstyle=\color[RGB]{0,237,0}\bfseries,
+  procnamestyle=\color[RGB]{192,255,115}
+}
+
+\lstdefinestyle{highlight/tabula}{
+  backgroundcolor=\color[RGB]{0,74,65},
+  style=common,
+  basicstyle=\color[RGB]{113,210,137},
+  identifierstyle=\color[RGB]{242,105,228},
+  commentstyle=\color[RGB]{0,197,231},
+  stringstyle=\color[RGB]{0,223,0},
+  keywordstyle=\color[RGB]{222,222,0}\bfseries,
+  procnamestyle=\color[RGB]{255,127,0}
+}
+
+\lstdefinestyle{highlight/molokai}{
+  backgroundcolor=\color[RGB]{39,40,34},
+  style=common,
+  basicstyle=\color[RGB]{248,248,242},
+  identifierstyle=\color[RGB]{102,217,239},
+  commentstyle=\color[RGB]{117,113,94},
+  stringstyle=\color[RGB]{230,219,116},
+  keywordstyle=\color[RGB]{249,38,114}\bfseries,
+  procnamestyle=\color[RGB]{37,250,172}
+}
+
+\lstdefinestyle{highlight/fruit}{
+  backgroundcolor=\color[RGB]{248,248,248},
+  style=common,
+  basicstyle=\color[RGB]{64,64,64},
+  identifierstyle=\color[RGB]{0,112,230},
+  commentstyle=\color[RGB]{255,64,128},
+  stringstyle=\color[RGB]{255,102,51},
+  keywordstyle=\color[RGB]{240,48,208},
+  procnamestyle=\color[RGB]{176,48,240}
+}
+
+\lstdefinestyle{highlight/autumn}{
+  backgroundcolor=\color[RGB]{255,244,232},
+  style=common,
+  basicstyle=\color[RGB]{64,64,64},
+  identifierstyle=\color[RGB]{176,108,88},
+  commentstyle=\color[RGB]{255,80,80},
+  stringstyle=\color[RGB]{0,136,76},
+  keywordstyle=\color[RGB]{128,160,48},
+  procnamestyle=\color[RGB]{153,0,0}
+}
+
+\lstdefinestyle{highlight/darkbone}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{160,160,192},
+  identifierstyle=\color[RGB]{224,224,255},
+  commentstyle=\color[RGB]{96,96,128},
+  stringstyle=\color[RGB]{208,224,128},
+  keywordstyle=\color[RGB]{128,144,240},
+  procnamestyle=\color[RGB]{159,191,175}
+}
+
+\lstdefinestyle{highlight/orion}{
+  backgroundcolor=\color[RGB]{30,22,22},
+  style=common,
+  basicstyle=\color[RGB]{196,177,168},
+  identifierstyle=\color[RGB]{186,25,25},
+  commentstyle=\color[RGB]{196,103,74},
+  stringstyle=\color[RGB]{99,93,99},
+  keywordstyle=\color[RGB]{73,212,214},
+  procnamestyle=\color[RGB]{173,81,57}
+}
+
+\lstdefinestyle{highlight/moria}{
+  backgroundcolor=\color[RGB]{32,32,32},
+  style=common,
+  basicstyle=\color[RGB]{208,208,208},
+  identifierstyle=\color[RGB]{240,148,121}\bfseries,
+  commentstyle=\color[RGB]{208,208,160},
+  stringstyle=\color[RGB]{135,223,113},
+  keywordstyle=\color[RGB]{126,192,238}\bfseries,
+  procnamestyle=\color[RGB]{228,126,237}
+}
+
+\lstdefinestyle{highlight/neon}{
+  backgroundcolor=\color[RGB]{48,48,48},
+  style=common,
+  basicstyle=\color[RGB]{240,240,240},
+  identifierstyle=\color[RGB]{96,240,168},
+  commentstyle=\color[RGB]{192,192,192},
+  stringstyle=\color[RGB]{146,212,255},
+  keywordstyle=\color[RGB]{220,220,120},
+  procnamestyle=\color[RGB]{219,121,170}
+}
+
+\lstdefinestyle{highlight/clarity}{
+  backgroundcolor=\color[RGB]{31,48,85},
+  style=common,
+  basicstyle=\color[RGB]{178,223,238},
+  identifierstyle=\color[RGB]{255,68,0},
+  commentstyle=\color[RGB]{158,158,158},
+  stringstyle=\color[RGB]{204,204,204},
+  keywordstyle=\color[RGB]{205,145,158},
+  procnamestyle=\color[RGB]{237,193,178}
+}
+
+\lstdefinestyle{highlight/leo}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,255,255},
+  identifierstyle=\color[RGB]{95,175,255},
+  commentstyle=\color[RGB]{168,168,168},
+  stringstyle=\color[RGB]{255,215,215},
+  keywordstyle=\color[RGB]{0,215,0},
+  procnamestyle=\color[RGB]{214,0,214}
+}
+
+\lstdefinestyle{highlight/nuvola}{
+  backgroundcolor=\color[RGB]{249,245,249},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,255},
+  commentstyle=\color[RGB]{63,107,91},
+  stringstyle=\color[RGB]{185,31,73},
+  keywordstyle=\color[RGB]{240,111,0},
+  procnamestyle=\color[RGB]{232,0,240}
+}
+
+\lstdefinestyle{highlight/edit-flashdevelop}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{0,0,255},
+  commentstyle=\color[RGB]{96,96,96},
+  stringstyle=\color[RGB]{163,21,21},
+  keywordstyle=\color[RGB]{0,0,255},
+  procnamestyle=\color[RGB]{43,145,175}
+}
+
+\lstdefinestyle{highlight/whitengrey}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{105,105,105},
+  identifierstyle=\color[RGB]{105,105,105},
+  commentstyle=\color[RGB]{19,38,162},
+  stringstyle=\color[RGB]{0,136,0},
+  keywordstyle=\color[RGB]{105,105,105}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/nightshimmer}{
+  backgroundcolor=\color[RGB]{16,48,64},
+  style=common,
+  basicstyle=\color[RGB]{224,238,224},
+  identifierstyle=\color[RGB]{173,216,230},
+  commentstyle=\color[RGB]{80,112,128},
+  stringstyle=\color[RGB]{0,255,255},
+  keywordstyle=\color[RGB]{144,238,144},
+  procnamestyle=\color[RGB]{255,153,153}
+}
+
+\lstdefinestyle{highlight/dusk}{
+  backgroundcolor=\color[RGB]{31,48,72},
+  style=common,
+  basicstyle=\color[RGB]{255,255,240},
+  identifierstyle=\color[RGB]{255,222,173},
+  commentstyle=\color[RGB]{112,128,144},
+  stringstyle=\color[RGB]{154,192,205},
+  keywordstyle=\color[RGB]{240,230,140},
+  procnamestyle=\color[RGB]{139,240,230}
+}
+
+\lstdefinestyle{highlight/tcsoft}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{255,153,0}\bfseries,
+  commentstyle=\color[RGB]{0,0,153},
+  stringstyle=\color[RGB]{102,102,102},
+  keywordstyle=\color[RGB]{255,153,0},
+  procnamestyle=\color[RGB]{255,0,229}
+}
+
+\lstdefinestyle{highlight/sienna}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{217,217,217},
+  identifierstyle=\color[RGB]{126,192,238}\bfseries,
+  commentstyle=\color[RGB]{108,166,205},
+  stringstyle=\color[RGB]{144,238,144},
+  keywordstyle=\color[RGB]{238,149,114}\bfseries,
+  procnamestyle=\color[RGB]{222,149,149}
+}
+
+\lstdefinestyle{highlight/camo}{
+  backgroundcolor=\color[RGB]{0,0,0},
+  style=common,
+  basicstyle=\color[RGB]{255,228,196},
+  identifierstyle=\color[RGB]{205,198,115},
+  commentstyle=\color[RGB]{210,180,140},
+  stringstyle=\color[RGB]{255,228,181},
+  keywordstyle=\color[RGB]{240,230,140},
+  procnamestyle=\color[RGB]{255,199,196}
+}
+
+\lstdefinestyle{highlight/edit-emacs}{
+  backgroundcolor=\color[RGB]{255,255,255},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{32,137,32},
+  commentstyle=\color[RGB]{172,32,32},
+  stringstyle=\color[RGB]{189,141,139},
+  keywordstyle=\color[RGB]{156,32,238}\bfseries,
+  procnamestyle=\color[RGB]{0,0,0}
+}
+
+\lstdefinestyle{highlight/easter}{
+  backgroundcolor=\color[RGB]{255,249,185},
+  style=common,
+  basicstyle=\color[RGB]{44,123,52},
+  identifierstyle=\color[RGB]{237,15,85}\bfseries,
+  commentstyle=\color[RGB]{30,164,17},
+  stringstyle=\color[RGB]{202,75,227},
+  keywordstyle=\color[RGB]{29,69,214}\bfseries,
+  procnamestyle=\color[RGB]{29,69,214}
+}
+
+\lstdefinestyle{highlight/peaksea}{
+  backgroundcolor=\color[RGB]{224,224,224},
+  style=common,
+  basicstyle=\color[RGB]{0,0,0},
+  identifierstyle=\color[RGB]{8,80,160},
+  commentstyle=\color[RGB]{96,96,0},
+  stringstyle=\color[RGB]{0,112,104},
+  keywordstyle=\color[RGB]{32,96,168},
+  procnamestyle=\color[RGB]{32,168,37}
+}
+
+\lstdefinestyle{highlight/baycomb}{
+  backgroundcolor=\color[RGB]{17,18,26},
+  style=common,
+  basicstyle=\color[RGB]{160,180,224},
+  identifierstyle=\color[RGB]{4,144,232}\bfseries,
+  commentstyle=\color[RGB]{52,157,88},
+  stringstyle=\color[RGB]{92,120,240},
+  keywordstyle=\color[RGB]{252,168,173},
+  procnamestyle=\color[RGB]{180,224,159}
+}
+
+\lstdefinestyle{highlight/maroloccio}{
+  backgroundcolor=\color[RGB]{26,32,42},
+  style=common,
+  basicstyle=\color[RGB]{139,154,170},
+  identifierstyle=\color[RGB]{255,204,0},
+  commentstyle=\color[RGB]{0,102,102},
+  stringstyle=\color[RGB]{76,76,173},
+  keywordstyle=\color[RGB]{153,102,204},
+  procnamestyle=\color[RGB]{153,204,102}
+}
+
